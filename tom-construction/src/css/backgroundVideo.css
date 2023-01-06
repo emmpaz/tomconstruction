@@ -1,0 +1,11 @@
+.backgroundVideoContainer{
+    width: 100%;
+    border-style: solid;
+    grid-area: 1 / 1 / 4 / 2;
+    z-index: -1;
+  }
+
+  .background-video{
+    width: 100%;
+    filter: brightness(40%);
+  }
