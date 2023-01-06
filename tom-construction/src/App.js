@@ -3,6 +3,7 @@ import BackgroundVideo from './backgroundVideo';
 import Header from './Header';
 import BigText from './BigText';
 import ResidentialCommerical from './ResidentialCommerical';
+import AboutUs from './AboutUs';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <BigText/>
       </div>
       <ResidentialCommerical/>
+      <AboutUs/>
     </div>
   );
 }

@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 .ResComContainer{
+    margin-top: 20px;
     display: flex;
     border-style: solid;
     flex-direction: column;
@@ -9,13 +10,18 @@
 
 .ResComTitleContainer{
     border-style: solid;
-    width: fit-content;
-    font-size: 30px;
+    width: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
+
+.ResComTitle{
+    font-size: calc(12px + 4vw);
+}
+
 .insuredContainer{
-    width: 100px;
+    width: 30%;
+    max-width: 250px;
     border-style: solid;
 }
 
@@ -25,7 +31,13 @@
 
 .ResComTextContainer{
     border-style: solid;
-    width: 50%;
+    width: 60%;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
+    max-width: 660px;
+    margin-bottom: 40px;
+}
+
+.ResComText{
+    font-size: calc(12px + 2vw);
 }

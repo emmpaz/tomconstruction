@@ -9,7 +9,7 @@ class ResidentialCommerical extends Component{
         return(
             <div className="ResComContainer">
                 <div className="ResComTitleContainer">
-                    <p>
+                    <p className="ResComTitle">
                         RESIDENTIAL | COMMERCIAL
                     </p>
                 </div>
@@ -17,8 +17,9 @@ class ResidentialCommerical extends Component{
                     <img className="ResComImage" src={insured}></img>
                 </div>
                 <div className="ResComTextContainer">
-                    <p>
-                        We are licensed, bonded and insured for residential and 
+                    <p className="ResComText">
+                        We are licensed, bonded and 
+                        insured for residential and
                         commercial work. 
                     </p>
                 </div>
