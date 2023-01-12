@@ -10,7 +10,7 @@ class AboutUs extends Component{
         return(
             <div className="AboutUsContainer">
                 <div className="AboutUsTitleContainer">
-                    <p className="AboutUsTitle">
+                    <p ref={this.props.title} className="AboutUsTitle">
                         About Us
                     </p>
                 </div>

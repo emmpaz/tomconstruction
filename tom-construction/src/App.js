@@ -1,22 +1,22 @@
 import './css/App.css';
-import BackgroundVideo from './backgroundVideo';
-import Header from './Header';
-import BigText from './BigText';
-import ResidentialCommerical from './ResidentialCommerical';
-import AboutUs from './AboutUs';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Services from './Services';
+import Gallery from './Gallery';
+import Video from './Video';
 
 function App() {
-  return (
-    <div className="App">
-      <div className="HeaderGaurd">
-        <BackgroundVideo/>
-        <Header/>
-        <BigText/>
-      </div>
-      <ResidentialCommerical/>
-      <AboutUs/>
-    </div>
-  );
+    return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/gallery" element={<Gallery/>}/>
+          <Route path='/videos' element={<Video/>}/>
+        </Routes>
+      </Router>
+    );
 }
 
 export default App;

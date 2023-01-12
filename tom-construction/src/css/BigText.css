@@ -1,6 +1,6 @@
 .BigTextContainer{
     width: 100%;
-    border-style: solid;
+    
     height: fit-content;
     grid-area: 2 / 1 / 3 / 2;
     display: flex;
@@ -10,6 +10,6 @@
 }
 
 .BigTextImage{
-    border-style: solid;
+    
     width: 60%;
 }
