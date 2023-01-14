@@ -38,6 +38,11 @@
     cursor: pointer;
 }
 
+.headerTabs p:hover{
+    color: white;
+    transition: all .5s;
+}
+
 
 .menuContainerOn{
     position: fixed;
@@ -83,6 +88,11 @@
     margin-bottom: 20px;
     color: #FEC23E;
     cursor: pointer;
+}
+
+.menuContentContainerOn p:hover{
+    color: white;
+    transition: all .5s;
 }
 
 .containerOff {

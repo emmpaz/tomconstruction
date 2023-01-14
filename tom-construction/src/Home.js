@@ -5,7 +5,7 @@ import BigText from './BigText';
 import ResidentialCommerical from './ResidentialCommerical';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
-import React,{ Component } from 'react';
+import React,{ Component, useEffect } from 'react';
 
 class Home extends Component {
 
