@@ -7,6 +7,9 @@ import Gallery from './Gallery';
 import Video from './Video';
 
 function App() {
+ 
+
+   
     return (
       <Router>
         <Routes>

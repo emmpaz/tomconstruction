@@ -1,84 +1,94 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 import './css/HeaderComponent.css';
 import tom from './images/tomWithWords.svg';
-class HeaderComponent extends Component {
+function HeaderComponent(props) {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            menuBar: false
-        }
+    const [menuBar, setMenuBar] = useState(false);
+    const navigate = useNavigate();
+
+    const menuBarToggle = () => {
+        setMenuBar(!menuBar);
     }
 
-    menuBarToggle = () => {
-        this.setState(prevState => ({
-            menuBar: !prevState.menuBar
-        }))
-    }
-
-    handleResize = () => {
+    const handleResize = () => {
         if (window.innerWidth > 925) {
-            this.setState(() => ({
-                menuBar: false
-            }))
+            setMenuBar(false);
         }
     }
 
-    componentDidMount() {
-        window.addEventListener("resize", this.handleResize)
+    useEffect(() => {
+        window.addEventListener("resize", handleResize)
+    }, []);
+        
+
+    const handleSendAbout = () => {
+        navigate("/", {
+            state : {
+                sent : "about"
+            }
+        });
     }
 
-    render() {
+    const handleSendContact = () => {
+        navigate("/", {
+            state : {
+                sent : "contact"
+            }
+        });
+    }
+
+
         return (
             <div className='HeaderComponentContainer'>
                 <a href="/" className="logoWithWordsContainer">
                     <img className='tomWithWords' src={tom}></img>
                 </a>
                 <div className='HeaderComponentTabsContainer'>
-                    <p style={(this.props.highlight === "services" ? { color: 'white' } : {})}>
+                    <p style={(props.highlight === "services" ? { color: 'white' } : {})}>
                         <a href="/services">SERVICES</a>
                     </p>
-                    <p style={(this.props.highlight === "videos" ? { color: 'white' } : {})}>
+                    <p style={(props.highlight === "videos" ? { color: 'white' } : {})}>
                         <a href="/videos">VIDEOS</a>
                     </p>
-                    <p style={(this.props.highlight === "gallery" ? { color: 'white' } : {})}>
+                    <p style={(props.highlight === "gallery" ? { color: 'white' } : {})}>
                         <a href="/gallery">GALLERY</a>
                     </p>
                     <p>
-                        <a href="/">ABOUT US</a>
+                        <a onClick={handleSendAbout}>ABOUT US</a>
                     </p>
                     <p>
-                        <a href="/">CONTACT</a>
+                        <a onClick={handleSendContact}>CONTACT</a>
                     </p>
 
                 </div>
-                <div className={this.state.menuBar ? "menuContainerOn" : "menuContainerOff"}>
-                    <div className={this.state.menuBar ? "menuContentContainerOn" : "menuContentContainerOff"}>
-                        <p style={(this.props.highlight === "services" ? { color: 'white' } : {})}>
+                <div className={menuBar ? "menuContainerOn" : "menuContainerOff"}>
+                    <div className={menuBar ? "menuContentContainerOn" : "menuContentContainerOff"}>
+                        <p style={(props.highlight === "services" ? { color: 'white' } : {})}>
                             <a href="/services">SERVICES</a>
                         </p>
-                        <p style={(this.props.highlight === "videos" ? { color: 'white' } : {})}>
+                        <p style={(props.highlight === "videos" ? { color: 'white' } : {})}>
                             <a href="/videos">VIDEOS</a>
                         </p>
-                        <p style={(this.props.highlight === "gallery" ? { color: 'white' } : {})}>
+                        <p style={(props.highlight === "gallery" ? { color: 'white' } : {})}>
                             <a href="/gallery">GALLERY</a>
                         </p>
                         <p>
-                            <a href="/">ABOUT US</a>
+                            <a onClick={handleSendAbout}>ABOUT US</a>
                         </p>
                         <p>
-                            <a href="/">CONTACT</a>
+                            <a onClick={handleSendContact}>CONTACT</a>
                         </p>
                     </div>
                 </div>
-                <div className={this.state.menuBar ? "ComponentcontainerOn" : "ComponentcontainerOff"} onClick={this.menuBarToggle}>
-                    <div className={this.state.menuBar ? "change bar1" : "bar1"}></div>
-                    <div className={this.state.menuBar ? "change bar2" : "bar2"}></div>
-                    <div className={this.state.menuBar ? "change bar3" : "bar3"}></div>
+                <div className={menuBar ? "ComponentcontainerOn" : "ComponentcontainerOff"} onClick={menuBarToggle}>
+                    <div className={menuBar ? "change bar1" : "bar1"}></div>
+                    <div className={menuBar ? "change bar2" : "bar2"}></div>
+                    <div className={menuBar ? "change bar3" : "bar3"}></div>
                 </div>
             </div>
         );
-    }
+
 }
 
 export default HeaderComponent;

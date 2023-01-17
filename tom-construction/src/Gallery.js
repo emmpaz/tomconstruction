@@ -34,12 +34,12 @@ class Gallery extends Component {
     render() { 
         return (
             <div className='GalleryContainer'>
-                <HeaderComponent highlight="gallery"/>
+                <HeaderComponent highlight="gallery"  setPath={this.props.setPath} prevPath={this.props.prevPath}/>
                 <div className='GalleryBoxContainer'>
                     {this.images.map((value, index) => {
                         return (
                             <div className='GalleryImageContainer'>
-                                <img style={{width: '100%', borderRadius: '30px'}}src={value} key={index}/>
+                                <img style={{width: '100%', borderRadius: '30px'}} src={value} key={value.toString()}/>
                             </div>
                         )
                     })}

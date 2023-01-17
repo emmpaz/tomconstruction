@@ -5,39 +5,49 @@ import BigText from './BigText';
 import ResidentialCommerical from './ResidentialCommerical';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
-import React,{ Component, useEffect } from 'react';
+import React,{ useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
-class Home extends Component {
 
-  constructor(props){
-    super(props);
+function Home(props) {
 
-    this.AboutUsRef = React.createRef();
-    this.ContactRef = React.createRef();
-  }
+  const location = useLocation();
+  const AboutUsRef = useRef(null);
+  const ContactRef = useRef(null);
 
-  AboutUsScroll = () => {
-    this.AboutUsRef.current.scrollIntoView({behavior:'smooth'});
+  const AboutUsScroll = () => {
+    AboutUsRef.current.scrollIntoView({behavior:'smooth'});
   };
 
-  ContactScroll = () => {
-    this.ContactRef.current.scrollIntoView({behavior : 'smooth'})
+   const ContactScroll = () => {
+    ContactRef.current.scrollIntoView({behavior : 'smooth'})
   }
 
-  render(){
+  useEffect(() =>{
+    if(location.state){
+      const {sent} = location.state;
+      if(sent === "about"){
+        AboutUsScroll();
+      }
+      else if(sent === "contact"){
+        ContactScroll();
+      }
+      window.history.replaceState({}, document.title);
+    }
+  }, [])
+
       return (
       <div className="App">
         <div className="HeaderGaurd">
           <BackgroundVideo/>
-          <Header aboutUsClick={this.AboutUsScroll.bind(this)} contactClick={this.ContactScroll.bind(this)} />
+          <Header aboutUsClick={AboutUsScroll.bind(this)} contactClick={ContactScroll.bind(this)} />
           <BigText/>
         </div>
         <ResidentialCommerical/>
-        <AboutUs title={this.AboutUsRef}/>
-        <Contact title={this.ContactRef}/>
+        <AboutUs title={AboutUsRef}/>
+        <Contact title={ContactRef}/>
       </div>
     );
-  }
 }
 
 export default Home;
