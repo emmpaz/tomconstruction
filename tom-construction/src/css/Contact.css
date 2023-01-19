@@ -2,17 +2,17 @@
 
 
 .ContactContainer{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 80px;
 }
 
 .ContactTitleContainer{
     
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 .ContactTitle{

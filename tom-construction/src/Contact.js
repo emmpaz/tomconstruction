@@ -10,7 +10,7 @@ class Contact extends Component {
         return (
             <div className="ContactContainer">
                 <div className="ContactTitleContainer">
-                    <p ref={this.props.title} className="ContactTitle">
+                    <p className="ContactTitle">
                         CONTACT
                     </p>
                 </div>
@@ -29,7 +29,7 @@ class Contact extends Component {
                     <a href="mailto: tomconcrete21@gmail.com" rel="noopener noreferrer" className="mailContainer">
                         <img src={mail} className="mailIcon"></img>
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=100083055346011" target="_blank" rel="noopener noreferrer" className="facebookContainer">
+                    <a ref={this.props.title} href="https://www.facebook.com/profile.php?id=100083055346011" target="_blank" rel="noopener noreferrer" className="facebookContainer">
                         <img src={facebook} className="facebookIcon"></img>
                     </a>
                 </div>
