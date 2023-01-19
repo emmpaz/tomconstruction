@@ -36,12 +36,6 @@ class Video extends Component {
         }
     }
 
-    videoClickHandler = (indexIncoming) =>{
-        this.setState({
-            index : indexIncoming
-        })
-    }
-
     render() {
         return (
             <div className='main-video-component-container'>
