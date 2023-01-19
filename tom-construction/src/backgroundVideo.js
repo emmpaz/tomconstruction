@@ -9,7 +9,7 @@ class BackgroundVideo extends Component{
     render(){
         return(
             <div className="backgroundVideoContainer">
-             <video className="background-video" autoPlay playsinline loop muted poster={poster}>
+             <video className="background-video" autoPlay playsInline loop muted poster={poster}>
                 <source src={video} type='video/mp4'></source>
              </video>
             </div>
