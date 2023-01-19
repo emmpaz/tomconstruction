@@ -38,11 +38,10 @@ function HeaderComponent(props) {
         });
     }
 
-
         return (
             <div className='HeaderComponentContainer'>
                 <a href="/" className="logoWithWordsContainer">
-                    <img className='tomWithWords' src={tom}></img>
+                    <img className='tomWithWords' alt="tom" src={tom}></img>
                 </a>
                 <div className='HeaderComponentTabsContainer'>
                     <p style={(props.highlight === "services" ? { color: 'white' } : {})}>
@@ -54,11 +53,11 @@ function HeaderComponent(props) {
                     <p style={(props.highlight === "gallery" ? { color: 'white' } : {})}>
                         <a href="/gallery">GALLERY</a>
                     </p>
-                    <p>
-                        <a onClick={handleSendAbout}>ABOUT US</a>
+                    <p onClick={handleSendAbout}>
+                        ABOUT US
                     </p>
-                    <p>
-                        <a onClick={handleSendContact}>CONTACT</a>
+                    <p onClick={handleSendContact}>
+                        CONTACT
                     </p>
 
                 </div>
@@ -73,11 +72,11 @@ function HeaderComponent(props) {
                         <p style={(props.highlight === "gallery" ? { color: 'white' } : {})}>
                             <a href="/gallery">GALLERY</a>
                         </p>
-                        <p>
-                            <a onClick={handleSendAbout}>ABOUT US</a>
+                        <p onClick={handleSendAbout}>
+                            ABOUT US
                         </p>
-                        <p>
-                            <a onClick={handleSendContact}>CONTACT</a>
+                        <p onClick={handleSendContact}>
+                            CONTACT
                         </p>
                     </div>
                 </div>

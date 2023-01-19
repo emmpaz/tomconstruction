@@ -39,7 +39,7 @@ class Gallery extends Component {
                     {this.images.map((value, index) => {
                         return (
                             <div className='GalleryImageContainer'>
-                                <img style={{width: '100%', borderRadius: '30px'}} src={value} key={value.toString()}/>
+                                <img style={{width: '100%', borderRadius: '10px'}} src={value} key={value.toString()}/>
                             </div>
                         )
                     })}

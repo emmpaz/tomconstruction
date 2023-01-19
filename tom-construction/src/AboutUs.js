@@ -16,15 +16,15 @@ class AboutUs extends Component{
                 </div>
                 <div className="AboutUsIconContainer">
                     <div className="fillingContainer">
-                        <img className="fillingIcon"src={filling}>
+                        <img className="fillingIcon" alt="filling" src={filling}>
                         </img>
                     </div>
                     <div className="moneyContainer">
-                        <img className="moneyIcon" src={money}>
+                        <img className="moneyIcon" alt="money" src={money}>
                         </img>
                     </div>
                     <div className="clockContainer">
-                        <img className="clockIcon" src={clock}>
+                        <img className="clockIcon" alt="clock" src={clock}>
                         </img>
                     </div>
                 </div>
@@ -32,7 +32,6 @@ class AboutUs extends Component{
                     <p className="AboutUsText">
                     We are a small local concrete company that has 
                     been in business since 2015. Our goal is to build the highest quality structure for a low cost and in the shortest amount of time.
-
                     </p>
                 </div>
             </div>

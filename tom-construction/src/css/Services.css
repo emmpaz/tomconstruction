@@ -1,6 +1,7 @@
 
 
 .ServicesBoxContainer{
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
