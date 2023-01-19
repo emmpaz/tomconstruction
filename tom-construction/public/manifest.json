@@ -1,20 +1,20 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "tom concrete",
+  "name": "Tom Concrete",
   "icons": [
     {
-      "src": "tom.svg",
+      "src": "tom.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "tom.svg",
-      "type": "image/svg",
+      "src": "tom.ico",
+      "type": "image/x-icon",
       "sizes": "192x192"
     },
     {
-      "src": "tom.svg",
-      "type": "image/svg",
+      "src": "tom.ico",
+      "type": "image/x-icon",
       "sizes": "512x512"
     }
   ],
