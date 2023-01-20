@@ -6,14 +6,6 @@ import Services from './Services';
 import Gallery from './Gallery';
 import Video from './Video';
 
-const videoJsOptions = {
-  autoplay: false,
-  controls: false,
-  sources: [{
-    src: './video/video.mp4',
-    type: 'video/mp4'
-  }]
-}
 function App() {
  
 
@@ -24,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/gallery" element={<Gallery/>}/>
-          <Route path='/videos' element={<Video {...videoJsOptions}/>}/>
+          <Route path='/videos' element={<Video/>}/>
         </Routes>
       </Router>
     );

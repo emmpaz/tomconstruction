@@ -32,8 +32,15 @@ class Video extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            index: 0
+            index: 5
         }
+    }
+
+    increaseIndexHandler = () => {
+
+        this.setState((prevState) => ({
+            index : (importedVideos.length < prevState.index + 5) ? importedVideos.length : prevState.index + 5
+        }))
     }
 
     render() {
@@ -42,7 +49,7 @@ class Video extends Component {
                 <HeaderComponent highlight="videos" />
                 <div className='video-component'>
                     {
-                        importedVideos.map((value, index) => {
+                        importedVideos.slice(0,this.state.index).map((value, index) => {
                             return(
                                 <div className='video-container'>
                                     <video className='video' controls="controls">
@@ -52,6 +59,9 @@ class Video extends Component {
                             )
                         })
                     }
+                </div>
+                <div className={(this.state.index === importedVideos.length) ? 'load-more-container-gone' : 'load-more-container'}>
+                    <p className='load-more' onClick={this.increaseIndexHandler}>LOAD MORE</p>
                 </div>
             </div>
         );

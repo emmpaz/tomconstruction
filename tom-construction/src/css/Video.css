@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 .video-component{
     margin-top: 10px;
     
@@ -20,92 +22,32 @@
     width: 100%;
     border-radius: 10px;
 }
-.video-content-container{
-    
-    width: 80%;
-    display: flex;
-    height: 600px;
-}
 
-.video-scroll-container{
-    width: 30%;
-    max-width: 150px;
-    background-color: bisque;
-    overflow: scroll;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-.mini-video-container{
-    margin : 20px;
-    width: fit-content;
-   display: grid;
-   height: fit-content;
-   max-width: 100px;
-}
-
-.mini-video-overlay{
-    grid-area: 1 / 1 / 2 / 2;
-    width: 100%;
-    cursor: pointer;
-    background-color: rgba(0,0,0, .7);
-    border-radius: 20px;
-    z-index: 1;
-}
-
-
-.mini-video{
-    object-fit: fill;
-    width: 100%;
-    height: 100%;
-    grid-area: 1 / 1 / 2 / 2; 
-    border-radius: 20px;
-} 
-
-
-.big-video-container{
+.load-more-container{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.big-video{
-    width: 70%;
-    max-width: 500px;
-    max-height: 100%;
-    border-radius: 20px;
+.load-more-container-gone{
+    display: none;
 }
 
+.load-more{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.load-more:hover{
+    color: #FEC23E;
+    transition: all .25s;
+}
 @media screen and (width < 700px) {
 
     .video-component{
         grid-template-columns: auto auto;
     }
-    .video-content-container{
-        flex-direction: column;
-    }
-
-    .video-scroll-container{
-        width: 100%;
-        height: fit-content;
-        max-width: 100%;
-        display: flex;
-        overflow-y: hidden;
-        overflow-x: scroll;
-    }
-    .big-video-container{
-        width: 100%;
-        height: 100%;
-        max-height: 500px;
-        align-self: center;
-    }
-
-    .mini-video-container{
-        height: 80px;
-        width: 80px;
-        flex-shrink: 0;
-        margin-top: 20px;
-    }
-
 }   

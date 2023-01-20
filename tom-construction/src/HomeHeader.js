@@ -33,7 +33,7 @@ class Header extends Component {
         return (
             <div className="HeaderContainer">
                 <div className="logoContainer">
-                    <img className="logoImage" src={logo}></img>
+                    <img className="logoImage" alt="logo" src={logo}></img>
                 </div>
                 <div className="headerTabs">
                     <p>

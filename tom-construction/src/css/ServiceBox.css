@@ -2,10 +2,10 @@
 
 .Box{
     position: relative;
-    width: 400px;
-    height: 400px;
-
-    margin: 20px;
+    width: 30%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    margin: 10px;
     border-radius: 20px;
 }
 
@@ -31,6 +31,7 @@
 .BoxName p{
     color: black;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 @media screen and (width < 500px) {

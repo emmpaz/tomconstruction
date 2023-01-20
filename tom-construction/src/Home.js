@@ -1,6 +1,6 @@
 import './css/App.css';
 import BackgroundVideo from './backgroundVideo';
-import Header from './Header';
+import Header from './HomeHeader';
 import BigText from './BigText';
 import ResidentialCommerical from './ResidentialCommerical';
 import AboutUs from './AboutUs';

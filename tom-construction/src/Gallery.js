@@ -13,36 +13,73 @@ import image8 from"./images/gallery/317714054_154035130708331_506115371344965803
 import image9 from"./images/gallery/318450111_155863113858866_8286196380806409621_n.jpg";
 import image10 from"./images/gallery/318474527_155863120525532_4027911322075882813_n.jpg";
 import image11 from"./images/gallery/318503433_155863127192198_1055556408786303841_n.jpg";
-import image12 from"./images/gallery/318686762_155863150525529_6388330611763156390_n.jpg";
+import i1 from './images/gallery/1.jpg';
+import i2 from './images/gallery/2.jpg';
+import i3 from './images/gallery/3.jpg';
+import i4 from './images/gallery/4.jpg';
+import i5 from './images/gallery/5.jpg';
+import i6 from './images/gallery/6.jpg';
+import i7 from './images/gallery/7.jpg';
+import i8 from './images/gallery/8.jpg';
+import i9 from './images/gallery/9.jpg';
+import i10 from './images/gallery/10.jpg';
+import i11 from './images/gallery/11.jpg';
+
+const images = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
+    image11,
+    i1,
+    i2,
+    i3,
+    i4,
+    i5,
+    i6,
+    i7,
+    i8,
+    i9,
+    i10,
+    i11
+]
 
 class Gallery extends Component {
 
-    images = [
-        image1,
-        image2,
-        image3,
-        image4,
-        image5,
-        image6,
-        image7,
-        image8,
-        image9,
-        image10,
-        image11,
-        image12
-    ]
+    constructor(props) {
+        super(props);
+        this.state = {
+            index: 6
+        }
+    }
+
+    increaseIndexHandler = () => {
+
+        this.setState((prevState) => ({
+            index : (images.length < prevState.index + 6) ? images.length : prevState.index + 6
+        }))
+    }
     render() { 
         return (
             <div className='GalleryContainer'>
-                <HeaderComponent highlight="gallery"  setPath={this.props.setPath} prevPath={this.props.prevPath}/>
+                <HeaderComponent highlight="gallery" />
                 <div className='GalleryBoxContainer'>
-                    {this.images.map((value, index) => {
+                    {images.slice(0,this.state.index).map((value) => {
                         return (
                             <div className='GalleryImageContainer'>
-                                <img style={{width: '100%', borderRadius: '10px'}} src={value} key={value.toString()}/>
+                                <img style={{width: '100%', borderRadius: '10px'}} alt="gallery" src={value} key={value.toString()}/>
                             </div>
                         )
                     })}
+                </div> 
+                <div className={(this.state.index === images.length) ? 'load-more-container-gone' : 'load-more-container'}>
+                    <p className='load-more' onClick={this.increaseIndexHandler}>LOAD MORE</p>
                 </div>
             </div>
         );
