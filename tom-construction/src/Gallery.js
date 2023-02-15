@@ -24,6 +24,11 @@ import i8 from './images/gallery/8.jpg';
 import i9 from './images/gallery/9.jpg';
 import i10 from './images/gallery/10.jpg';
 import i11 from './images/gallery/11.jpg';
+import i12 from './images/gallery/12.jpg';
+import i13 from './images/gallery/13.jpg';
+import i14 from './images/gallery/14.jpg';
+import i15 from './images/gallery/15.jpg';
+import i16 from './images/gallery/16.jpg';
 
 const images = [
     image1,
@@ -47,7 +52,12 @@ const images = [
     i8,
     i9,
     i10,
-    i11
+    i11,
+    i12,
+    i13,
+    i14,
+    i15,
+    i16,
 ]
 
 class Gallery extends Component {
