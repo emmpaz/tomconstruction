@@ -1,7 +1,7 @@
 import { Component } from "react";
 import './css/backgroundVideo.css';
 import poster from './video/first-frame.png';
-import video from './video/video.mp4';
+import video from './video/video-actual.mp4';
 
 class BackgroundVideo extends Component{
     
