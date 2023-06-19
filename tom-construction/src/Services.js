@@ -4,19 +4,18 @@ import HeaderComponent from './HeaderComponent';
 import ServiceBox from './ServiceBox';
 
 
-import driveway from './images/serviceImages/driveway.jpg';
-import patio from './images/serviceImages/patio.jpg';
-import sidewalk from './images/serviceImages/sidewalk.svg';
-import porch from './images/serviceImages/porch.svg';
-import foundation from './images/serviceImages/foundation.jpg';
-import stamped from './images/serviceImages/stamped.jpg';
-import garage from './images/serviceImages/garage.jpg';
-import commercialbuilding from './images/serviceImages/commercialBuilding.jpg';
-import commercial from './images/serviceImages/commerical.jpg';
+import driveway from './images/services-icons/icons8-driveway-96_upscaled.png';
+import patio from './images/services-icons/icons8-patio-100_upscaled.png';
+import sidewalk from './images/services-icons/icons8-sidewalk-100_upscaled.png';
+import porch from './images/services-icons/icons8-house-60_upscaled.png';
+import foundation from './images/services-icons/icons8-reinforced-concrete-100_upscaled.png';
+import stamped from './images/services-icons/icons8-paving-stone-walkway-100_upscaled.png';
+import garage from './images/services-icons/icons8-garage-100_upscaled.png';
+import commercialbuilding from './images/services-icons/icons8-building-100_upscaled.png';
 
 class Home extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
@@ -28,10 +27,9 @@ class Home extends Component {
     foundation,
     stamped,
     garage,
-    commercialbuilding,
-    commercial
+    commercialbuilding
   ]
-  
+
   servicesNames = [
     "Driveways",
     "Patios",
@@ -40,20 +38,25 @@ class Home extends Component {
     "Foundations",
     "Stamped Concrete",
     "Garage Floors",
-    "Commericial Buildings",
-    "Commericial Concrete"
+    "Commericial Buildings"
   ]
 
 
-  render(){
-      return (
+  render() {
+    return (
       <div className="ServicesContainer">
-        <HeaderComponent highlight="services"/>
-          <div className='ServicesBoxContainer'>
-            {this.servicesNames.map((value, index) =>{
-             return <ServiceBox name={value} key={index} pic={this.servicesImages[index]}/>
-            } )}
-          </div>
+        <HeaderComponent highlight="services" />
+        <div className='services-big-text-container'>
+          <p className='hundred-text'>100%</p>
+          <p className='guarantee-text'>satification guaranteed</p>
+        </div>
+        <div className='ServicesBoxContainer'>
+          {this.servicesNames.map((value, index) => {
+            console.log(index)
+            return <ServiceBox name={value} index={index} key={index} pic={this.servicesImages[index]} />
+          })}
+        </div>
+        <h2>Contact us if a service isn't listed</h2>
       </div>
     );
   }

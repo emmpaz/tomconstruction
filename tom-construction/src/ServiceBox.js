@@ -8,10 +8,21 @@ class ServiceBox extends Component {
     render() {
         return (
             <div className='Box'>
-                <img className='ServiceImage' src={this.props.pic}></img>
-                <div className='BoxName'>
-                    <p>{this.props.name}</p>
-                </div>
+                {(this.props.index % 2 == 0) ?
+                    <div className='content-wrapped'>
+                        <img className='ServiceImage' src={this.props.pic}></img>
+                        <div className='BoxName'>
+                            <p>{this.props.name}</p>
+                        </div>
+                    </div>
+                    :
+                    <div className='content-wrapped-left-float'>
+                        <div className='BoxName'>
+                            <p>{this.props.name}</p>
+                        </div>
+                        <img className='ServiceImage' src={this.props.pic}></img>
+                    </div>
+                }
             </div>
         );
     }

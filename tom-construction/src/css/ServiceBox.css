@@ -1,53 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+.content-wrapped{
+    width: 100%;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapped-left-float{
+    width: 100%;
+    padding-right: 50px;
+    display: flex;
+    justify-content: end;
+    background-color: #FFD47A;
+    align-items: center;
+
+}
+
 .Box{
-    position: relative;
-    width: 30%;
-    max-width: 300px;
-    aspect-ratio: 1;
-    margin: 10px;
-    border-radius: 20px;
+    width: 100%;
+    display: flex;
 }
 
 .ServiceImage{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    border-radius: 20px;
-}
-
-.BoxName{
-    background-color: rgba(255, 212, 122, 0.8);
-    bottom: 0;
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 50px;
-    justify-content: center;
-    z-index: -1;
-    border-radius: 0 0 20px 20px;
+    width: 10%;
+    min-width: 100px;
+    margin: 50px 0 50px 0;
 }
 
 .BoxName p{
     color: black;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-}
-
-@media screen and (width < 500px) and (width > 446px){
-    .Box{
-        margin: 12px;
-        width: 200px;
-        height: 200px;
-
-    }
-}
-
-@media screen and (width < 447px) {
-    .Box{
-        margin: 5px;
-        width: 175px;
-        height: 175px;
-    }
+    font-weight: 500;
+    font-size: 25px;
+    margin: 50px;
 }

@@ -1,4 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+.services-big-text-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hundred-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 50px;
+    font-size: calc(12px + 10vw);
+    margin-block-end: 0;
+}
+
+.guarantee-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: calc(12px + 1vw);
+    margin-block-start: 0;
+}
 
 .ServicesBoxContainer{
     margin-top: 50px;
