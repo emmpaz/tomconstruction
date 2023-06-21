@@ -56,7 +56,7 @@ class Home extends Component {
             return <ServiceBox name={value} index={index} key={index} pic={this.servicesImages[index]} />
           })}
         </div>
-        <h2>Contact us if a service isn't listed</h2>
+        <p className='footer-text'>Contact us if a concrete service you need isn't listed</p>
       </div>
     );
   }

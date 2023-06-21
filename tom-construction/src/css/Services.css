@@ -14,6 +14,15 @@
     margin-block-end: 0;
 }
 
+.footer-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 50px;
+    font-size: calc(12px + .3vw);
+    margin-block-end: 0;
+    text-align: center;
+}
+
 .guarantee-text{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;

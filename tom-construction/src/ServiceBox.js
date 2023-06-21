@@ -7,6 +7,7 @@ class ServiceBox extends Component {
 
     render() {
         return (
+            <div className='container'>
             <div className='Box'>
                 {(this.props.index % 2 == 0) ?
                     <div className='content-wrapped'>
@@ -23,6 +24,8 @@ class ServiceBox extends Component {
                         <img className='ServiceImage' src={this.props.pic}></img>
                     </div>
                 }
+            </div>
+            <div className='line-break'/>
             </div>
         );
     }
