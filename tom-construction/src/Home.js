@@ -7,6 +7,7 @@ import AboutUs from './AboutUs';
 import Contact from './Contact';
 import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import CloudGallery from './test-gallery';
 
 
 function Home(props) {
@@ -49,6 +50,7 @@ function Home(props) {
         <BigText />
       </div>
       <ResidentialCommerical />
+      <CloudGallery/>
       <AboutUs title={AboutUsRef} />
       <Contact title={ContactRef} />
     </div>

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+.ContactContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.ContactTitleContainer{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+.ContactTitle{
+    
+    font-size: calc(12px + 4vw);
+
+}
+
+.ContactIconContainer{
+    display: flex;
+    
+    margin: 50px 20px 50px 20px;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.phoneContainer{
+    width: 15%;
+    max-width: 200px;
+    
+    margin: 0 20px 0 30px;
+}
+
+.phoneIcon{
+    width: 100%;
+    cursor: pointer;
+}
+
+.mailContainer{
+    width: 15%;
+    max-width: 150px;
+    
+    margin: 0 20px 0 20px;
+}
+
+.mailIcon{
+    width: 100%;
+    cursor: pointer;
+}
+
+.facebookContainer{
+    width: 15%;
+    max-width: 150px;
+    
+    margin: 0 30px 0 20px;
+}
+
+.facebookIcon{
+    width: 100%;
+    cursor: pointer;
+}
+
+.ContactTextContainer{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    width: 60%;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+.ContactText{
+    font-size: calc(12px + 2vw);
+}
+
+a{
+   all: unset;
+}

@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.HeaderGaurd{
+  height: fit-content;
+  
+  border-color: white;
+  display: grid;
+  position: relative;
+}

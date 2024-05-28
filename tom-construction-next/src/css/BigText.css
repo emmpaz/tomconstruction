@@ -1,0 +1,15 @@
+.BigTextContainer{
+    width: 100%;
+    
+    height: fit-content;
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.BigTextImage{
+    
+    width: 60%;
+}

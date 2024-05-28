@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+.AboutUsContainer{
+    
+    background-color: #FFD47A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AboutUsTitleContainer{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.AboutUsTitle{
+    
+    font-size: calc(12px + 4vw);
+
+}
+
+.AboutUsIconContainer{
+    display: flex;
+    
+    margin: 0 20px 0 20px;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+
+.fillingContainer{
+    width: 15%;
+    max-width: 200px;
+    
+    margin: 0 20px 0 30px;
+}
+
+.fillingIcon{
+    width: 100%;
+}
+
+.moneyContainer{
+    width: 15%;
+    max-width: 150px;
+    
+    margin: 0 20px 0 20px;
+}
+
+.moneyIcon{
+    width: 100%;
+}
+
+.clockContainer{
+    width: 15%;
+    max-width: 150px;
+    
+    margin: 0 30px 0 20px;
+}
+
+.clockIcon{
+    width: 100%;
+}
+
+.AboutUsTextContainer{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    width: 60%;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+.AboutUsText{
+    font-size: calc(12px + 2vw);
+}

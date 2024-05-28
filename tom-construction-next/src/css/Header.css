@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.HeaderContainer{
+    
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.logoContainer{
+    width:18%;
+    max-width: 150px;
+    
+    margin: 20px 0 0 20px;
+    height: fit-content;
+}
+
+.logoImage{
+    width: 100%;
+}
+
+.headerTabs{
+    display: flex;
+    
+    width: fit-content;
+    height: fit-content;    
+    margin-right: 25px;
+    align-self: center;
+}
+
+.headerTabs .link{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #FEC23E;
+    cursor: pointer;
+}
+
+.headerTabs .link:hover{
+    color: white;
+    transition: all .5s;
+}
+
+
+.menuContainerOn{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: grey;
+    transition: .5s;
+    z-index: 2;
+}
+
+.menuContainerOff{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0px;
+    background-color: grey;
+    transition: .5s;
+}
+
+.menuContentContainerOn{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuContentContainerOff{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 80px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuContentContainerOn .link{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #FEC23E;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menuContentContainerOn .link:hover{
+    color: white;
+    transition: all .5s;
+}
+
+.containerOff {
+    display: none;
+}
+  
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: #FEC23E;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+  
+.change.bar1 {
+      transform: translate(0, 9px) rotate(-45deg);
+      background-color: #FEC23E;
+}
+    
+.change.bar2 {
+      opacity: 0;
+}
+    
+.change.bar3 {
+      transform: translate(0, -9px) rotate(45deg);
+      background-color: #FEC23E;
+}
+
+@media  screen and (width < 620px) {
+    .headerTabs{
+        display: none;
+    }
+
+    .containerOff {
+        cursor: pointer;
+        display: inline-block;
+        align-self: center;
+        
+        margin-right: 20px;
+        z-index: 2;
+    }
+
+    .containerOn {
+        cursor: pointer;
+        display: inline-block;
+        align-self: center;
+        
+        margin-right: 20px;
+        z-index: 2;
+      }
+
+}

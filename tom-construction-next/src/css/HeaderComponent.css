@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.HeaderComponentContainer{
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoWithWordsContainer{
+    width: 50%;
+    max-width: 400px;
+    cursor: pointer;
+    margin: 15px 0 15px 0;
+}
+
+.tomWithWords{
+    width: 100%;
+}
+
+.HeaderComponentTabsContainer{
+    display: flex;
+    
+    width: fit-content;
+    height: fit-content;    
+    margin-right: 25px;
+    
+}
+
+.HeaderComponentTabsContainer .link{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #FEC23E;
+    text-decoration: none;
+
+}
+
+.HeaderComponentTabsContainer .link:hover{
+    color: white;
+    transition: all .5s;
+}
+
+.ComponentcontainerOff {
+    display: none;
+}
+  
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: #FEC23E;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+  
+.change.bar1 {
+      transform: translate(0, 9px) rotate(-45deg);
+      background-color: #FEC23E;
+}
+    
+.change.bar2 {
+      opacity: 0;
+}
+    
+.change.bar3 {
+      transform: translate(0, -9px) rotate(45deg);
+      background-color: #FEC23E;
+}
+
+@media  screen and (width < 925px) {
+    .HeaderComponentTabsContainer{
+        display: none;
+    }
+
+    .ComponentcontainerOff {
+        cursor: pointer;
+        display: inline-block;
+        align-self: center;
+        
+        margin-right: 20px;
+        z-index: 2;
+    }
+
+    .ComponentcontainerOn {
+        cursor: pointer;
+        display: inline-block;
+        align-self: center;
+        
+        margin-right: 20px;
+        z-index: 2;
+      }
+
+}
