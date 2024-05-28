@@ -50,3 +50,8 @@ export const getVideos = cache(async (limit : number=4 , nextCursor : string | n
         nextCursor: res.next_cursor
     }
 });
+
+export const getFirstVideo = cache(async () => {
+    const res = await cloudinary.api.resources_by_asset_ids('59094a3523e0b2fa55b5d33f40134650');
+    return res.resources[0];
+})
