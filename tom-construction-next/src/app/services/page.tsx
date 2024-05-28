@@ -50,7 +50,7 @@ function Page(){
             return <ServiceBox name={value} index={index} key={index} pic={servicesImages[index]} />
           })}
         </div>
-        <p className='footer-text'>Contact us if a concrete service you need isn't listed</p>
+        <p className='footer-text'>{`Contact us if a concrete service you need isn't listed`}</p>
       </div>
     );
 }

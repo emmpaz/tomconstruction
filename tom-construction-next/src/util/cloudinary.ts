@@ -50,7 +50,3 @@ export const getVideos = cache(async (limit : number=4 , nextCursor : string | n
         nextCursor: res.next_cursor
     }
 });
-
-export const loadMoreVideos = async(nextCursor: string) => {
-
-}
