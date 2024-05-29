@@ -19,7 +19,7 @@ export const getImages = async () => {
         max_results: 100
     });
     const version = res.resources.length;
-
+    console.log(version);
     return res.resources.map((image : {
         public_id: string,
     }) => ({
