@@ -9,7 +9,9 @@ cloudinary.config({
     api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
     secure: true
 })
-
+/**
+ * grab images from cloudinary
+ */
 export const getImages = cache(async () => {
     const res = await cloudinary.api.resources({
         type: 'upload',
@@ -31,7 +33,10 @@ export const getImages = cache(async () => {
         })
     }));
 })
-
+/**
+ * get videos from cloudinary with a default limit of 4 and a cursor that contains
+ * the position of where it left off it querying
+ */
 export const getVideos = cache(async (limit : number=4 , nextCursor : string | null = null) => {
     const res = await cloudinary.api.resources({
         type: 'upload',
@@ -50,7 +55,9 @@ export const getVideos = cache(async (limit : number=4 , nextCursor : string | n
         nextCursor: res.next_cursor
     }
 });
-
+/**
+ * grabbing intro video
+ */
 export const getFirstVideo = cache(async () => {
     const res = await cloudinary.api.resources_by_asset_ids('59094a3523e0b2fa55b5d33f40134650');
     return res.resources[0];
