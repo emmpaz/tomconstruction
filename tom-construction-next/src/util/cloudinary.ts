@@ -18,7 +18,7 @@ export const getImages = cache(async () => {
         prefix: 'tom/',
         max_results: 100
     });
-
+    const version = res.resources.length;
 
     return res.resources.map((image : {
         public_id: string,
@@ -29,7 +29,8 @@ export const getImages = cache(async () => {
             crop: 'scale',
             dpr: 'auto',
             fetch_format: 'auto',
-            quality: 'auto'
+            quality: 'auto',
+            version: version
         })
     }));
 })
