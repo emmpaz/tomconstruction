@@ -12,7 +12,7 @@ cloudinary.config({
 /**
  * grab images from cloudinary
  */
-export const getImages = cache(async () => {
+export const getImages = async () => {
     const res = await cloudinary.api.resources({
         type: 'upload',
         prefix: 'tom/',
@@ -33,7 +33,7 @@ export const getImages = cache(async () => {
             version: version
         })
     }));
-})
+}
 /**
  * get videos from cloudinary with a default limit of 4 and a cursor that contains
  * the position of where it left off it querying
