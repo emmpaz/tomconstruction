@@ -3,15 +3,13 @@ import formidable from 'formidable';
 import { UploadApiResponse, v2 as cloudinary } from "cloudinary";
 import { resolve } from "path";
 
-cloudinary.config({
-    cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-    api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
-    api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
-    secure: true
-})
-
 export async function POST(request: NextRequest){
-    
+    cloudinary.config({
+        cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+        api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+        api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
+        secure: true
+    })
     //
     const data = await request.formData();
     const files = data.getAll('files') as File[];
