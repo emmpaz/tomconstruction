@@ -44,8 +44,8 @@ export default function Home() {
         </div>
       </form>
       <div className=" max-w-xl flex flex-col mt-10">
-        {imageURLs && imageURLs.map((url) => (
-            <img src={url} className="w-ful my-2"/>
+        {imageURLs && imageURLs.map((url, index) => (
+            <img src={url} key={index} className="w-ful my-2"/>
         ))}
       </div>
     </div>
