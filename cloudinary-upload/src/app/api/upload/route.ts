@@ -24,7 +24,8 @@ export async function POST(request: NextRequest){
 
             const uploaded_file : UploadApiResponse | undefined = await new Promise((resolve, reject) => {
                 cloudinary.uploader.upload_stream({
-                    folder: 'tom'
+                    folder: 'tom',
+                    invalidate: true
                 },(error, uploadResult) => {
                     if(error) reject(error);
                     return resolve(uploadResult);
